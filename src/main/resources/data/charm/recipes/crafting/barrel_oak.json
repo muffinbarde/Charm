@@ -1,11 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "PSP", "P P", "PSP"
+    "PSP",
+    "P P",
+    "PSP"
   ],
   "key": {
-    "S": {"item": "minecraft:oak_slab"},
-    "P": {"item": "minecraft:oak_planks"}
+    "P": {
+      "item": "minecraft:oak_planks"
+    },
+    "S": {
+      "item": "minecraft:oak_slab"
+    }
   },
   "result": {
     "item": "charm:barrel_oak"
