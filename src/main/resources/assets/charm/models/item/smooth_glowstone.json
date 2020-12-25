@@ -1,6 +1,3 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "charm:block/smooth_glowstone"
-  }
+  "parent": "charm:block/smooth_glowstone"
 }

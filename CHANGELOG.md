@@ -1,116 +1,144 @@
-# Changelog for Charm
+# Changelog
 
-## 1.5.10
-* Fixed barrel crafting issues. #288
-* Added Redstone Lanterns
-* Added Colored Lanterns (Coranthes)
-* Added wolf tame textures (NeverLoseGuy)
-* Added zh_tw lang file (Nanamiya738)
-* Updated black wolf textures (MCVinnyq)
-* Barrel wood texture changes (Coranthes)
-* Now possible to enable/disable logging of debug messages via config. #276
+## 2.2.0
+* Fix Wandering Trader not spawning (F43nd1r)
+* Fix grindstone xp exploit (sven)
+* Enchantment descriptions support (F43nd1r)
+* Coral Squids may now be captured in a bucket. They do not despawn when placed (Coranthes)
+* Feeding animals restocks item (F43nd1r)
+* Hoe harvesting no longer places block in offhand (F43nd1r)
+* Config option to enable no trampling of crops even without feather falling (F43nd1r)
+* Config option to allow opening of atlas in off-hand (F43nd1r)
 
-## 1.5.9
-* Fixed issue with crates not being named after the correct wood type.
-* Fixed recipes for bookshelf chests when Quark is present.
-* Fixed oak barrel recipe.
-* Fixed pig iron giving XP when mined with silk touch.
-* Fixed crash when using homing on a non-vanilla digger.  Fixes #272
-* End portals with colored runes now make the "spawn" sound when creating a portal.
-* Updated all wood-type textures.
-* Added lantern improvements. Lanterns now obey gravity and can be waterlogged.
+## 2.1.11
+* Added mob sound culling
 
-## 1.5.8
-* Added all music discs to the minecraft music disc pool.
-* Music discs now dropped by creepers when killed by skeletons, as per vanilla mechanics.
-* Fixed Potion of Decay language string.
-* Fixed bound compass anvil naming issue.
-* Fixed bound compasses in the wrong dimension not randomly swinging.
-* Removed music track that wasn't being used, saving some filesize!
-* [1.15] Added back End Portal Runes.
+## 2.1.10
+* Fix exploit with books on grindstone
+* Fix crates losing their content on world save/load
+* Fix Quark overrides not working properly (F43nd1r)
+* Fix village builds not spawning villages (Coranthes)
+* Remove wither rose from custom village flower builds
+* Atlas recipe has been changed
+* Dynamic data for custom village builds
+* Added More Portal Frames
+* Added Map Tooltips with atlas support (F43nd1r)
 
-## 1.5.7
-* Fixed module enabled when sould be disabled. Fixes #247
-* Added configurable parrot mimic chance. Fixes #245
-* Added cauldron cleaning things.
-* Added Curse of Leeching.
-* Added Dimensional Compasses.
-* Bound compasses no longer have an enchantment glint; dimensional compasses do.
-* Updated some textures from MCVinnyq.
-* JEI integration for Charm anvil recipes.
-* Rotten flesh block now has configurable fertiliser chance and rate of passive growth has been nerfed.
-* Bat in a bucket now only highlights living entities.
+## 2.1.9
+* Fix grindstone enchantment extraction consuming an entire book stack (ridjack)
+* Added Atlas (F43nd1r)
 
-## 1.5.6
-* Added parrots perching on nearby end rods.
-* Crates now show contents when hovering over the item icon.
-* Crates and Bookshelf chests now support Quark's item transfer, sorting and search.
-* [1.15] Composter now outputs extra items correctly. Fixes #243
+## 2.1.8
+* Fix itemgroups. #406
+* Fix render hover in incorrect place
+* Fix village jigsaw piece problems. #409
+* Fix modules being enabled when they shouldn't (#420, others)
+* Fix Shulkerbox showing hover when empty
+* Fix bookshelf recipe in wrong place
 
-## 1.5.5
-* Fixed music tick checking again. Fix #228
-* Fixed bucket stack being consumed when catching a bat. Fix #218
-* Leather armor now properly hides you from monsters. Fix #226
-* [1.15] Removed rune portal frames from wither and dragon immune tags, stops console errors. Fix #227
-* [1.15] Restore Quark compatibility layer.
-* Improve drop chance of gold nuggets.
-* Added missing redstone sand loot table.
+## 2.1.7
+* Added StackableStews (F43nd1r)
 
-## 1.5.4
-* Added parrots staying on player shoulder when jumping.
-* Added Nether pig iron ore.
-* Nether pig iron nuggets are now used to repair any item instead of tallow.
-* Nether gold deposits can now smelt to gold ingots.
-* Structure maps are now sold by Wandering Traders instead of Cartographers.
-* Website for 1.14+ and 1.12 migrated to Jekyll.
+## 2.1.6
+* Fix bowl stack lost when milking Mooblooms #403
+* AutoRestock now works properly when adding items to composter (F43nd1r)
+* Remove Wandering Trader signal fire restriction
+* Remove treasure enchantment cost on grindstone
+* Hoe harvesting fully grown crop now plays sound
 
-## 1.5.3
-* Minor logging changes
-* Some internal interface changes to prepare for 1.15+
+## 2.1.5
+* Fix missing spruce bookshelf recipe
+* Fix acquisition enchantment not dropping XP from harvested blocks
+* Fix grindstone not showing the XP cost when the player has enough XP
+* Fix kilns and woodcutters not dropping themselves on break without optimal tool
+* Fix crates showing tooltip when empty
+* Fix overworld music sometimes playing when entering the nether
+* Reduce spawn weights of lumberjack and beekeeper village pieces
+* Raid Horns volume reduced by 25% and is configurable
+* Raid Horns have cooldown after use
+* Default amount of levels required to extract a treasure enchantment has been decreased from 15 to 10
 
-## 1.5.2
-* Rewrite loader to tackle concurrency issues and inconsistent loading
-* Rewrite network handler to tackle problems when loaded with other Charm-based mods
-* Internal changes to ease transition to 1.15+
-* Logging fixes for better debugging and formatting log text to make it more similar to Quark
-* Bump search range for structure maps from 100 to 500 blocks
-* Don't allow enchantments to be extracted that are not allowed on books
-* Chickens randomly drop feathers
+## 2.1.4
+* Fix client inventory buttons
+* Fix inventory button flicker when display Quark's backpack ui (F43nd1r)
 
-## 1.5.1
-* Fixed issue with Quark runes not working in end portal frame
+## 2.1.3
+* Added AutoRestock (F43nd1r)
 
-## 1.5.0
-* Foundation changes for Strange.
-* Moonstones and custom music disc have been moved to Strange.  **May cause unregistered item warnings** if upgrading from older beta.
-* More Villages feature now adds bedrock-edition village biomes.
-* Lowered eruption volume and added config for it. Fix #213
+## 2.1.2
+* Fix dropped netherite-based items cause crash on dedicated server
+* Fix disabled modules do not disable recipes after change to toml config
+* Fix shulker boxes not being craftable with variant chests
+* Fix dispenser not firing glowballs
+* Fix refined obsidian walls not connecting
+* Fix glowballs converting blocks to water source blocks
+* Reduce spawn weight and group size of Coral Squids
+* After much deliberation, we decided Coral Squids should no longer spawn uncontrollably and crash servers
+* Enchantments are now extracted by the grindstone (Credit to [martenschaefer](https://github.com/mschae23/grind-enchantments))
+* Added Mooblooms
+* Added Snow storms
+* Added Raid horns
+* Added Acquisition enchantment
+* Added Tinted enchantment
+* REI woodcutter and kiln integration
 
-## 1.4.3
-* Fixed Config ignoring state of disabled modules.  This is a bit of a hack, let me know if it stops working again
-* Random animal textures and Stackable items now respect config enabled/disabled
-* Fixed Charm crash if another mod has some loading problem
-* Fixed dispensers not firing splash potions properly if Stackable potions is enabled
-* Flavored cakes don't allow you to add the same potion
-* Flavored cakes don't let you add potions if they've been nommed
-* When using the Homing enchant, the player will now face the ore through the world
-* Added two music discs for the end: "Boss" and "The End"
+## 2.1.1
+* Fix Coral Squid hitboxes. #351, #361
+* Fix Candles not making sound when lighting
+* Glow balls are now known as glowballs
+* Placeable Glowstone Dust has been removed
+* Update glowball texture
+* **Charm's config now uses toml format.** Old json file will not be deleted, but existing config changes **will not be copied across.**
 
-## 1.4.2
-* Fixed Loader ignoring state of disabled modules in config
-* Fixed wolves and Quark foxhounds being invulnerable when untamed
-* Added Emerald blocks open villager trades feature
-* Creative mode players can now kill tamed animals
+## 2.1.0
+* Totem of Undying causing crash on server. Fixes #339
+* VariantAnimalTextures has become VariantMobTextures. This changes the charm.json config file
+* Added feature Coral Squids
+* Added feature Coral Sea Lanterns
+* Added Snow Golem derp face variants
+* Added Kilns
+* Added Refined Obsidian
+* Added Smooth Glowstone
+* Glow Pearls and placed glowstone can now light up any solid block face
+* Removed invisible mineshaft spiders
 
-## 1.4.1
-* Fixed sticky piston not being sticky
-* Fixed Beacons not giving buff/debuffs
-* Added Flavored Cakes for Quark potions
-* Added End Portal Runes to link End Portals together
-* Added ambient music improvements and merged "Records Stop Music" into it
-* Added super secret Charm music disc
-* Bats now take half a heart of damage when released from bucket
-* Fumaroles erupt 50% less often
+## 2.0.4
+* Added feature Placeable Glowstone Dust that lets you... place glowstone dust
+* Added feature Glow Balls which are projectiles that light up the block they impact
+* Added variant snow golem derp faces
 
-## 1.4.0
-Initial beta release
+## 2.0.3
+* Darkness check for Husks and Strays, fixes them spawning in full light
+* Lecterns can now be crafted from variant bookshelves. Fixes #330
+* Explicit registration of Charm sounds. Relates to #333
+* Changed block entity for barrel to fix a server bug. Fixes #332
+
+## 2.0.2
+* Candles are now valid decoration blocks when generating structures
+* Restored vanilla chests and barrels, crafted using mixed wood
+* Added hopper and minecart chest recipes with variant chests #231
+
+## 2.0.1
+* Fixed crash when trying to open lumberjack trades (dedicated server)
+* Fixed missing loot tables for some custom village structures
+
+## 2.0.0
+* Fixed tidy button position on village trade screens
+* Fixed broken armor invisibility when stripping in front of mobs
+* Updated ladder textures
+* Removed tidy button from beacon inventory
+* Empty crates no longer drop themselves when in creative mode
+* Added config option for chorus fruit teleport range
+* Added more lumberjack and beekeeper house builds
+* Added Lumberjack and Beekeeper trades
+* Added Lumberjack and Beekeeper loot table for their village houses
+* Beekeeper trades now use tagged flowers
+* Chest texture and trim improvements
+* Custom villagers now have zombie textures
+* Removed "More Villager Trades" feature
+* Axe now effective tool for woodcutter block
+* Bump to Minecraft 1.16.3
+* Removed improved lanterns due to unsolvable graphical issue
+* Reduced mineshaft default ore spawn rate
+* Lumberjacks log trade now only uses logs and stripped logs as requested item
+* Lumberjacks now sell noteblocks and jukeboxes instead of converting logs to planks

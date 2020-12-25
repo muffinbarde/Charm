@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "block/oak_planks",
-    "side": "charm:block/bookshelf_chest_oak_0"
-  }
-}

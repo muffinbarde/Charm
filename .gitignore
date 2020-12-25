@@ -1,6 +1,8 @@
 /.gradle
 /build
 /run
+/run*
+/logs
 /.vscode
 /.settings
 /.metadata
@@ -68,3 +70,6 @@ buildmc.sh
 runClient.launch
 runServer.launch
 *.code-workspace
+
+/b0rk
+/b0rker
